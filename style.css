@@ -1,0 +1,174 @@
+/* Color Palletes 
+#00b289
+
+#4c4d5f
+
+#fff
+
+#f8db62*/
+
+* {
+  padding: 0;
+  margin: 0;
+
+  font-family: "Open Sans", sans-serif;
+}
+
+.navbar a,
+li {
+  text-decoration: none;
+  list-style: none;
+  font-size: 0.9rem;
+  padding: 10px 10px;
+  font-weight: 400;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 15px;
+  width: 85%;
+  margin-left: 15px;
+}
+
+/* Logo */
+.nav-logo {
+  height: 70%;
+}
+
+@media (max-width:980px) {
+    .nav-logo{
+        height: 42%;
+    }
+}
+/* Links */
+.nav-links {
+  display: flex;
+  flex-wrap: nowrap;
+  
+}
+
+
+/* Buttoms */
+.navbar button {
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin: 0 10px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  cursor: pointer;
+  border: 1px solid #00b289;
+}
+
+.start-free-btn {
+  width: 135px;
+  height: 40px;
+  background-color: #00b289;
+  color: #fff;
+}
+
+.login-btn {
+  width: 92px;
+  height: 39px;
+  background-color: #fff;
+  color: #00b289;
+}
+
+.login-btn:hover {
+  background-color: #00b289;
+  color: #fff;
+}
+
+.start-free-btn:hover {
+  background-color: #00a289;
+}
+
+
+/* Header */
+
+.pricing {
+    display: flex;
+    justify-content: center;
+    margin-top:8%;
+}
+
+.pricing h2{
+    font-size: 2rem;
+    font-weight: 400;
+    font-style: oblique;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin-right: 100px;
+}
+
+.pricing h3{
+    font-size: .9rem;
+    font-weight: 700;
+    margin: 0 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+.month-year{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 43px;
+    height: 25px;
+    margin: 0 20px;
+    
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+    
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #00b289;
+    -webkit-transition: .4s;
+    transition: .4s;
+    
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 25px;
+    width: 26px;
+    
+    
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+ 
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(21px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
