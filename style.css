@@ -10,8 +10,8 @@
 * {
   padding: 0;
   margin: 0;
-
   font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
 }
 
 .navbar a,
@@ -26,9 +26,13 @@ li {
 .navbar {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 15px;
+  padding-top: 20px;
   width: 85%;
   margin-left: 15px;
+  position: fixed;
+  background-color: #fff;
+  top: 0px;
+  z-index: 1;
 }
 
 /* Logo */
@@ -36,18 +40,16 @@ li {
   height: 70%;
 }
 
-@media (max-width:980px) {
-    .nav-logo{
-        height: 42%;
-    }
+@media (max-width: 980px) {
+  .nav-logo {
+    height: 42%;
+  }
 }
 /* Links */
 .nav-links {
   display: flex;
   flex-wrap: nowrap;
-  
 }
-
 
 /* Buttoms */
 .navbar button {
@@ -83,92 +85,289 @@ li {
   background-color: #00a289;
 }
 
-
 /* Header */
 
 .pricing {
-    display: flex;
-    justify-content: center;
-    margin-top:8%;
+  display: flex;
+  justify-content: center;
+  margin: 8% 0 2% 0;
 }
 
-.pricing h2{
-    font-size: 2rem;
-    font-weight: 400;
-    font-style: oblique;
-    text-transform: capitalize;
-    letter-spacing: 1px;
-    margin-right: 100px;
+.pricing h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: oblique;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  margin-right: 100px;
 }
 
-.pricing h3{
-    font-size: .9rem;
-    font-weight: 700;
-    margin: 0 30px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+.monthly,
+.yearly {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin: 0 1%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.yearly {
+  color: gray;
 }
 
-
-.month-year{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.month-year {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+/* Switch option */
 .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  margin: 0 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00b289;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 25px;
+  margin: 2px 0 0 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Plans options */
+
+.planes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  flex: 1;
+}
+
+.plans {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-align: left;
+  flex: 1;
+  margin: 20px;
+  border: 0.3px solid rgba(2, 4, 69, 0.15);
+  border-radius: 4px;
+  background-color: #fbfcff;
+  box-shadow: 0 0 68px 0 rgba(2, 4, 69, 0.08);
+  max-width: 359px;
+  min-height: 900px;
+  overflow: hidden;
+  position: relative;
+}
+
+.content-reduce {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  height: 800px;
+  max-width: 70%;
+  margin-top: 70px;
+}
+
+.price-tag {
+  font-size: 2rem;
+  font-weight: 400;
+  position: relative;
+  bottom: 20px;
+  margin-right: 5px;
+}
+.price-month {
+  font-weight: 400;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+.underline {
+  display: inline-block;
+  width: 100%;
+  border-top: 3px solid #00b289;
+  margin: 0;
+  position: relative;
+}
+.icon-list {
+  margin: 0 5px;
+}
+
+.plans h4 {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.plans p {
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+.plans li {
+  font-size: 0.8rem;
+  position: relative;
+  right: 15px;
+}
+.plans h2 {
+  font-size: 3.7rem;
+  color: #4c525a;
+}
+.plans button {
+  min-width: 100%;
+  height: 60px;
+  color: #fff;
+  background-color: #00b289;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  border: none;
+  margin-top: auto;
+}
+
+/* Inclinado */
+.inclinado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00b289;
+  color: #fff;
+  height: 5%;
+  width: 100%;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 30%;
+  bottom: 90%;
+  font-size: 0.9rem;
+}
+
+/* Media */
+@media (max-width: 1042px) {
+  header {
+    margin-top: 15%;
+  }
+  .planes {
+    flex-direction: column;
+  }
+  .plans {
+    min-width: 90%;
+    align-items: start;
+  }
+  .content-reduce {
+    margin: 10%;
+    min-width: 80%;
+  }
+  .underline {
+    min-width: 80%;
+  }
+  .plan-details {
+    margin-top: 30px;
+  }
+  .plans h4 {
+    font-size: 1.8rem;
+  }
+
+  .plans p {
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+  .plans li {
+    font-size: 1rem;
     position: relative;
-    display: inline-block;
-    width: 43px;
-    height: 25px;
-    margin: 0 20px;
-    
+    right: 15px;
+  }
+  .plans h2 {
+    font-size: 3.6rem;
+    color: #4c525a;
+  }
+  .plans button {
+    width: 80%;
+  }
+  .navbar {
+    display: none;
+  }
+  .inclinado {
+    left: 40%;
+    bottom: 87%;
+  }
+}
+
+@media (max-width: 830px) {
+  .pricing h2 {
+    font-size: 1.5rem;
+  }
+  .monthly,
+  .yearly {
+    font-size: 0.7rem;
+  }
+  .plans {
+    min-height: 700px;
+  }
+  .content-reduce {
+    height: 700px;
+  }
+  .inclinado {
+    left: 40%;
+    bottom: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .pricing h2 {
+    font-size: 1rem;
+  }
+  .monthly,
+  .yearly {
+    font-size: 0.6rem;
   }
   
-  .switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
-    
+}
+
+@media(max-width:500px){
+  .inclinado {
+    font-size: .6rem;
+    bottom: 90%;
+    left: 35%;
   }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #00b289;
-    -webkit-transition: .4s;
-    transition: .4s;
-    
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 25px;
-    width: 26px;
-    
-    
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
- 
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(21px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
+}
+
+
