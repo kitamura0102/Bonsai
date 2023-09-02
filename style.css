@@ -13,6 +13,9 @@
   font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
 }
+body {
+  color: #4c525a;
+}
 
 .navbar a,
 li {
@@ -67,6 +70,9 @@ li {
   height: 40px;
   background-color: #00b289;
   color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .login-btn {
@@ -280,6 +286,117 @@ input:checked + .slider:before {
   font-size: 0.9rem;
 }
 
+/* Addons */
+.header-addons {
+  text-align: center;
+  font-size: 2rem;
+  font-style: oblique;
+  font-weight: 400;
+  margin: 50px 0 20px 0;
+}
+.add-ons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+.add-ons-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 1160px;
+  min-height: 130px;
+
+  margin: 15px;
+  border: 0.1px rgba(2, 4, 69, 0.15);
+  border-radius: 4px;
+  background-color: #fbfcff;
+  box-shadow: 0 0 68px 0 rgba(2, 4, 69, 0.08);
+}
+.add-ons-right {
+  text-align: center;
+}
+.add-ons-right h4 {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-left: 15px;
+}
+.add-ons-right h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.add-ons-text h3,
+p {
+  margin: 5px 0 5px 0;
+}
+.add-ons-text a {
+  color: #00b289;
+  text-decoration: none;
+}
+.add-ons-right h5 {
+  font-size: 2.8rem;
+}
+
+/* inspire section  */
+
+.inspire-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+}
+.inspire-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 900px;
+  height: 200px;
+  background-color: #f2faff;
+}
+.message {
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-style: oblique;
+  letter-spacing: 1px;
+}
+.inspire-btn {
+  min-width: 170px;
+  height: 50px;
+}
+
+
+
+/* FAQ QUESTIONS */
+.faq-text p {
+  display: none;
+  font-size: .9rem;
+  margin: 15px 3px 0 3px;
+}
+.faq-text h3{
+  font-size: 1.5rem;
+}
+.faq  h2{
+  font-size: 2rem;
+  color: #00b289;
+  margin: 10px 0;
+}
+
+.faq{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  
+}
+.faq-container{
+  display: flex;
+  width: 750px;
+  
+  margin-top: 20px;
+  cursor: pointer;
+justify-content: space-between;}
 /* Media */
 @media (max-width: 1042px) {
   header {
@@ -317,7 +434,6 @@ input:checked + .slider:before {
   }
   .plans h2 {
     font-size: 3.6rem;
-    color: #4c525a;
   }
   .plans button {
     width: 80%;
@@ -328,6 +444,20 @@ input:checked + .slider:before {
   .inclinado {
     left: 40%;
     bottom: 87%;
+  }
+  .add-ons-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 80%;
+  }
+  .inspire-container {
+    max-width: 90%;
+    
+  }
+  .message {
+    font-size: 1.3rem;
   }
 }
 
@@ -349,6 +479,13 @@ input:checked + .slider:before {
     left: 40%;
     bottom: 90%;
   }
+  .add-ons-container {
+    flex-flow: column-reverse wrap;
+    align-items: flex-start;
+
+    min-width: 80%;
+    padding-left: 10px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -359,15 +496,23 @@ input:checked + .slider:before {
   .yearly {
     font-size: 0.6rem;
   }
-  
-}
-
-@media(max-width:500px){
-  .inclinado {
-    font-size: .6rem;
-    bottom: 90%;
-    left: 35%;
+  .inspire-container {
+    flex-flow: column;
+    height: 300px;
+    max-width: 100%;
+  }
+  .message {
+    width: 50%;
+    text-align: center;
   }
 }
 
-
+@media (max-width: 500px) {
+  .inclinado {
+    font-size: 0.6rem;
+    bottom: 90%;
+    left: 35%;
+    align-items: center;
+    justify-content: center;
+  }
+}
