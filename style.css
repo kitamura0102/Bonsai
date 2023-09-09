@@ -202,7 +202,7 @@ input:checked + .slider:before {
   background-color: #fbfcff;
   box-shadow: 0 0 68px 0 rgba(2, 4, 69, 0.08);
   max-width: 359px;
-  min-height: 900px;
+  min-height: 200px;
   overflow: hidden;
   position: relative;
 }
@@ -407,7 +407,20 @@ footer {
   margin-top: 30px;
   
 }
-
+.mention{
+  
+  margin: 40px;
+  font-size: 1rem;
+  text-align: center;
+}
+.mention a{
+  text-decoration: none;
+  color: #00a289;
+}
+.mention span{
+  
+  color: #00a289;
+}
 
 .colums-footer {
   display: flex;
@@ -513,9 +526,7 @@ footer {
   .plans {
     min-height: 700px;
   }
-  .content-reduce {
-    height: 700px;
-  }
+  
   .inclinado {
     left: 40%;
     bottom: 90%;
@@ -537,9 +548,18 @@ footer {
   .faq-text h3 {
     font-size: 1rem;
   }
+  .header-addons{
+    font-size: 1.8rem;
+  }
+  .add-ons h5{
+    font-size: 2.7rem;
+  }
 }
 
 @media (max-width: 600px) {
+  .pricing{
+    margin: 20px;
+  }
   .pricing h2 {
     font-size: 1rem;
   }
@@ -569,6 +589,7 @@ footer {
   .faq h2 {
     font-size: 1.6rem;
   }
+  
 }
 
 @media (max-width: 500px) {
@@ -579,4 +600,5 @@ footer {
     align-items: center;
     justify-content: center;
   }
+  
 }
