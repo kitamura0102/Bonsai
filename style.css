@@ -21,7 +21,7 @@ body {
 li {
   text-decoration: none;
   list-style: none;
-  font-size: 0.9rem;
+  font-size: 1rem;
   padding: 10px 10px;
   font-weight: 400;
 }
@@ -30,7 +30,7 @@ li {
   display: flex;
   justify-content: space-evenly;
   padding-top: 20px;
-  width: 85%;
+  width: 100%;
   margin-left: 15px;
   position: fixed;
   background-color: #fff;
@@ -366,37 +366,69 @@ p {
   height: 50px;
 }
 
-
-
 /* FAQ QUESTIONS */
 .faq-text p {
   display: none;
-  font-size: .9rem;
+  font-size: 0.9rem;
   margin: 15px 3px 0 3px;
 }
-.faq-text h3{
+.faq-text h3 {
   font-size: 1.5rem;
 }
-.faq  h2{
+.faq h2 {
   font-size: 2rem;
   color: #00b289;
   margin: 10px 0;
 }
 
-.faq{
+.faq {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column;
-  
+  margin: 60px;
 }
-.faq-container{
+.faq-container {
   display: flex;
-  width: 750px;
-  
+  width: 40%;
+
   margin-top: 20px;
   cursor: pointer;
-justify-content: space-between;}
+  justify-content: space-between;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+  
+}
+
+
+.colums-footer {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 20px 0 100px 0;
+  width: 25%;
+  position: relative;
+  left:150px;
+}
+.product-footer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-top: 20px;
+  width: 70%;
+  align-items: flex-start;
+}
+.product-footer a {
+  text-decoration: none;
+
+  margin: 5px;
+}
 /* Media */
 @media (max-width: 1042px) {
   header {
@@ -454,10 +486,18 @@ justify-content: space-between;}
   }
   .inspire-container {
     max-width: 90%;
-    
   }
   .message {
     font-size: 1.3rem;
+  }
+  footer{
+    flex-flow: column;
+  }
+  .colums-footer {
+    margin-left: 20px;
+    width: 55%;
+    position: relative;
+    left:0;
   }
 }
 
@@ -486,6 +526,16 @@ justify-content: space-between;}
     min-width: 80%;
     padding-left: 10px;
   }
+  .faq-container {
+    width: 70%;
+  }
+  .faq-text p {
+    font-size: 0.9rem;
+    margin: 15px 3px 0 3px;
+  }
+  .faq-text h3 {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 600px) {
@@ -504,6 +554,19 @@ justify-content: space-between;}
   .message {
     width: 50%;
     text-align: center;
+  }
+  .faq-container {
+    width: 80%;
+  }
+  .faq-text p {
+    font-size: 0.9rem;
+    margin: 15px 3px 0 3px;
+  }
+  .faq-text h3 {
+    font-size: 1rem;
+  }
+  .faq h2 {
+    font-size: 1.6rem;
   }
 }
 
