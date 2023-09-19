@@ -32,7 +32,7 @@ li {
   justify-content: space-evenly;
   padding-top: 20px;
   width: 100%;
-  margin-left: 15px;
+
   position: fixed;
   background-color: #fff;
   top: 0px;
@@ -42,12 +42,14 @@ li {
 /* Logo */
 .nav-logo {
   height: 70%;
+  display: block;
 }
 
 @media (max-width: 980px) {
-  .nav-logo {
+  .nav-logo{
     height: 42%;
   }
+  
 }
 /* Links */
 .nav-links {
@@ -185,17 +187,15 @@ input:checked + .slider:before {
 .planes {
   display: flex;
   justify-content: center;
-  align-items: center;
+
   flex-flow: row nowrap;
-  flex: 1;
 }
 
 .plans {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  text-align: left;
-  flex: 1;
+
   margin: 20px;
   border: 0.3px solid rgba(2, 4, 69, 0.15);
   border-radius: 4px;
@@ -210,7 +210,7 @@ input:checked + .slider:before {
 .content-reduce {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  align-items: flex-start;
   height: 800px;
   max-width: 70%;
   margin-top: 70px;
@@ -228,6 +228,10 @@ input:checked + .slider:before {
   font-size: 1.4rem;
   text-transform: uppercase;
 }
+.fa-ul {
+  margin: 0 auto;
+  width: 100%;
+}
 .underline {
   display: inline-block;
   width: 100%;
@@ -236,7 +240,7 @@ input:checked + .slider:before {
   position: relative;
 }
 .icon-list {
-  margin: 0 5px;
+  margin: 0 7px;
 }
 
 .plans h4 {
@@ -249,7 +253,7 @@ input:checked + .slider:before {
   margin-top: 5px;
 }
 .plans li {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   position: relative;
   right: 15px;
 }
@@ -368,7 +372,7 @@ p {
 }
 
 /* FAQ QUESTIONS */
-.faq-text p {
+.show-faq {
   display: none;
   font-size: 0.9rem;
   margin: 15px 3px 0 3px;
@@ -405,20 +409,17 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 30px;
-  
 }
-.mention{
-  
+.mention {
   margin: 40px;
   font-size: 1rem;
   text-align: center;
 }
-.mention a{
+.mention a {
   text-decoration: none;
   color: #00a289;
 }
-.mention span{
-  
+.mention span {
   color: #00a289;
 }
 
@@ -428,7 +429,7 @@ footer {
   margin: 20px 0 100px 0;
   width: 25%;
   position: relative;
-  left:150px;
+  left: 150px;
 }
 .product-footer {
   display: flex;
@@ -440,13 +441,155 @@ footer {
 }
 .product-footer a {
   text-decoration: none;
-
+  color: #4c525a;
   margin: 5px;
+}
+
+/* Hamburger */
+.navbar-burger {
+  display: none;
+  align-items: flex-end;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  width: 85%;
+  
+  justify-content: space-between;
+}
+.burger-nav{
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    right: 30px;
+    top: 50px;
+    z-index: 2;
+}
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  cursor: pointer;
+  z-index: 2;
+}
+.bar {
+  width: 35px;
+  height: 3px;
+  margin: 3px 0;
+  transition: 0.4s;
+  background-color: #00b289;
+}
+
+.navbar-burger-after {
+  height: 800px;
+  width: 100%;
+  display: none;
+
+  justify-content: center;
+}
+.burger-display {
+  display: flex;
+  flex-flow: column nowrap;
+
+  width: 80%;
+  height: 50%;
+}
+.burger-links {
+  border-bottom: 1px solid #c3c3c3;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.burger-links h3 {
+  margin-bottom: 15px;
+  color: #4c525a;
+  font-weight: 400;
+}
+.burger-buttom button {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: 1px solid #00b289;
+}
+
+.nav-logo2{
+  position: relative;
+  left: 0;
+  margin-top: 10px;
+  height:40%;
+  z-index: 2;
+  display: none;
+  
+}
+.navbar-close-btn {
+  position: relative;
+  bottom: 8px;
+  
+}
+
+
+.navbar-close-btn :first-child {
+  transform: rotate(47deg);
+}
+.navbar-close-btn :last-child {
+  transform: rotate(-47deg);
+  position: relative;
+  bottom: 4px;
+}
+.whole-burger {
+  display: none;
+  position: relative;
+  z-index: 1;
+  transition: right 0.5s ease;
+  margin-top: 150px;
+}
+.whole-burger.opened {
+  right: 0; /* Abre el contenido deslizando hacia la derecha */
+}
+.burger-open.active .bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.burger-open.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-open.active .bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
 }
 /* Media */
 @media (max-width: 1042px) {
+  .faq-container i{
+    margin-top: 15px;
+  }
+  .navbar-burger{
+    display: flex;
+  }
+  .navbar-burger-after{
+    display: flex;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+  }
+  .nav-logo {
+    display: block;
+    height: 70%;
+    margin-top: 10px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
   header {
-    margin-top: 15%;
+    margin-top: 30%;
   }
   .planes {
     flex-direction: column;
@@ -484,7 +627,11 @@ footer {
   .plans button {
     width: 80%;
   }
-  .navbar {
+  .links {
+    display: none;
+  }
+  .navbar button,
+  img {
     display: none;
   }
   .inclinado {
@@ -504,14 +651,14 @@ footer {
   .message {
     font-size: 1.3rem;
   }
-  footer{
+  footer {
     flex-flow: column;
   }
   .colums-footer {
     margin-left: 20px;
     width: 55%;
     position: relative;
-    left:0;
+    left: 0;
   }
 }
 
@@ -526,7 +673,7 @@ footer {
   .plans {
     min-height: 700px;
   }
-  
+
   .inclinado {
     left: 40%;
     bottom: 90%;
@@ -548,16 +695,16 @@ footer {
   .faq-text h3 {
     font-size: 1rem;
   }
-  .header-addons{
+  .header-addons {
     font-size: 1.8rem;
   }
-  .add-ons h5{
+  .add-ons h5 {
     font-size: 2.7rem;
   }
 }
 
 @media (max-width: 600px) {
-  .pricing{
+  .pricing {
     margin: 20px;
   }
   .pricing h2 {
@@ -573,7 +720,7 @@ footer {
     max-width: 100%;
   }
   .message {
-    width: 50%;
+    width: 60%;
     text-align: center;
   }
   .faq-container {
@@ -589,7 +736,6 @@ footer {
   .faq h2 {
     font-size: 1.6rem;
   }
-  
 }
 
 @media (max-width: 500px) {
@@ -600,5 +746,4 @@ footer {
     align-items: center;
     justify-content: center;
   }
-  
 }
