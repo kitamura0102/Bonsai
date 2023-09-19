@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="/font/FontsFree-Net-Proxima-Nova-Reg.otf" />
     <script
       src="https://kit.fontawesome.com/f3b2bd313f.js"
       crossorigin="anonymous"
@@ -17,24 +18,68 @@
   </head>
   <body>
     <nav class="navbar">
-      <a href=""
+      <a href="#"
         ><img src="/images/bonsai-logo.svg" alt="" class="nav-logo" />
       </a>
 
-      <ul class="nav-links">
-        <li>
-          <a href="#">Product</a>
-        </li>
-        <li><a href="#">Templates</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Reviews</a></li>
-      </ul>
-      <div>
+      <div class="links">
+        <ul class="nav-links">
+          <li>
+            <a href="#">Product</a>
+          </li>
+          <li><a href="#">Templates</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Reviews</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-btn">
         <button class="login-btn">Log in</button>
         <button class="start-free-btn">Start free</button>
       </div>
+      <!-- Burger -->
+      <div class="navbar-burger">
+        <a href="#"
+          ><img src="/images/bonsai-logo-mini.svg" alt="" class="nav-logo2" />
+        </a>
+        <div class="menu-toggle burger-open" id="burgerToggle">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
     </nav>
     <header>
+      <div class="whole-burger">
+        <div class="navbar-burger-after">
+          <div class="burger-display">
+            <div class="burger-links">
+              <h3>Product</h3>
+              <i
+                class="fa-solid fa-chevron-down fa-sm"
+                style="color: #00b289; margin-top: 10px"
+              ></i>
+            </div>
+            <div class="burger-links">
+              <h3>Templates</h3>
+              <i
+                class="fa-solid fa-chevron-down fa-sm"
+                style="color: #00b289; margin-top: 10px"
+              ></i>
+            </div>
+            <div class="burger-links">
+              <h3>Pricing</h3>
+            </div>
+            <div class="burger-links">
+              <h3>Reviews</h3>
+            </div>
+            <div class="burger-buttom">
+              <button class="login-btn">Log in</button>
+              <button class="start-free-btn">start free</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="pricing">
         <h2>Plans & Pricing</h2>
         <div class="month-year">
@@ -148,11 +193,9 @@
             <ul class="fa-ul">
               <li>
                 <span class="icon-list"
-                  ><i
-                    class="fa-solid fa-check fa-sm"
-                    style="color: #00b289"
-                  ></i></span
-                >Everything in Starter plus...
+                  ><i class="fa-solid fa-check fa-sm" style="color: #00b289"></i
+                ></span>
+                Everything in Starter plus...
               </li>
               <li>
                 <span class="icon-list"
@@ -396,9 +439,8 @@
             Page.
           </p>
         </div>
-        <div class="right-faq">
-          <i class="fa-solid fa-chevron-down fa-xl" style="color: #00b289"></i>
-        </div>
+
+        <i class="fa-solid fa-chevron-down fa-xl" style="color: #00b289"></i>
       </div>
       <div class="faq-container">
         <div class="faq-text">
@@ -409,9 +451,8 @@
             one, you can do this by going to your "Settings" and "Subscription".
           </p>
         </div>
-        <div class="right-faq">
-          <i class="fa-solid fa-chevron-down fa-xl" style="color: #00b289"></i>
-        </div>
+
+        <i class="fa-solid fa-chevron-down fa-xl" style="color: #00b289"></i>
       </div>
       <div class="faq-container">
         <div class="faq-text">
@@ -426,9 +467,8 @@
             order to cancel your subscription, login to your Bonsai account.
           </p>
         </div>
-        <div class="right-faq">
-          <i class="fa-solid fa-chevron-down fa-xl" style="color: #00b289"></i>
-        </div>
+
+        <i class="fa-solid fa-chevron-down fa-xl" style="color: #00b289"></i>
       </div>
       <div class="faq-container">
         <div class="faq-text">
@@ -443,9 +483,8 @@
             plans.
           </p>
         </div>
-        <div class="right-faq">
-          <i class="fa-solid fa-chevron-down fa-xl" style="color: #00b289"></i>
-        </div>
+
+        <i class="fa-solid fa-chevron-down fa-xl" style="color: #00b289"></i>
       </div>
     </section>
     <footer>
@@ -508,6 +547,19 @@
         </div>
       </div>
     </footer>
+    <div class="mention">
+      <h5>
+        Project from
+        <a href="https://www.frontendpractice.com/projects/bonsai"
+          >Frontend Practice</a
+        >
+        Website but developed by
+        <a href="https://www.instagram.com/raul_almonte01/ " target="_blank"
+          >Raul Almonte Adames</a
+        >
+      </h5>
+    </div>
+
     <script src="app.js"></script>
   </body>
 </html>
